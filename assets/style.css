@@ -69,6 +69,17 @@
     border-radius: 20px;
 }
 
+@media (max-width:768px){
+    *:is(h1, .titre){
+        font-size: 25px;
+    }
+    *:is(h2, .sous-titre){
+        font-size: 20px;
+    }
+    *:is(p, .paragraphe){
+        font-size: 15px;
+    }
+}
 /* ----------> Body <---------- */
 
 body.accueil {
@@ -233,6 +244,17 @@ body .presentation {
     min-height: 300px;
 }
 
+body main .boulangerie,
+body main .patisseries,
+body main .sandwicherie,
+body main .pizzas,
+body main .gourmandises{
+    background-image: url(img/Boulangerie_background.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /* body main .rectangle-left{
     content: url("data:image/svg+xml,%3Csvg width='159' height='100' viewBox='0 0 159 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100 100H159L62 0H0L100 100Z' fill='%23776A6A'/%3E%3C/svg%3E%0A");
     position: absolute;
@@ -249,12 +271,22 @@ body main .rectangle-right{
     z-index: 0;
 } */
 
+@media (max-width:1024px){
+    body .presentation{
+        width: 60%;
+    }
+}
 @media (max-width:768px){
     body main .infos {
         flex-direction: column;
         justify-content: space-evenly;
     }
+    body .presentation{
+        width: 75%;
+    }
 }
+
+
 
 
 
@@ -265,17 +297,20 @@ body main .rectangle-right{
 
 body footer .footer-menu{
     background-color: var(--gris-c);
-    height: 400px;
+    height: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    padding: 70px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-body footer .footer-menu .footer-menu-left .maps{
+body footer .footer-menu .footer-menu-left .maps {
     content: url(img/Maps.png);
-    height: 300px;
+    height: auto;
     border-radius: var(--radius);
+    width: 100%;
+    display: block;
 }
 
 body footer .copyright{
@@ -336,7 +371,24 @@ body footer form button:hover{
     cursor: pointer;
 }
 
+@media (max-width:500px){
+    body footer form .form-row {
+        flex-direction: column;
+    }
+}
 
+@media (max-width:768px){
+    body footer .footer-menu {
+        padding: 20px;
+    }
+}
+
+@media (max-width:1300px){
+    body footer .footer-menu {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
 
 /* ----------> figma Body <---------- */
 /* Accueil */
