@@ -8,45 +8,134 @@
     <title>Boulangerie</title>
 </head>
 
-<body>
+<body class="accueil">
     <header>
         <div class="menu">
-            <div class="logo">
+            <!-- Bouton menu hamburger -->
+            <button id="menu-toggle" class="hamburger">
+                &#9776; <!-- Icône du menu (ou tu peux utiliser une icône font-awesome si tu préfères) -->
+            </button>
 
-            </div>
-            <div class="navigation" id="navigation">
-
-            </div>
+            <nav id="navigation">
+                <a href="#id-boulangerie">Boulangerie</a>
+                <a href="#id-patisseries">Pâtisseries</a>
+                <a href="#id-sandwicherie">Sandwicherie</a>
+                <a href="#id-pizzas">Pizzas</a>
+                <a href="#id-gourmandises">Gourmandises</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
-    <main>
-        <section class="boulangerie">
-                
-        </section>
-        <section class="patisserie">
-<!-- Test --><!-- Test --><!-- Test -->
-        </section>
-        <section class="sandwicherie">
 
-        </section>
-        <section class="pizza">
+    <!-- <div class="presentation"> 
+        <h2>nom</h2>
+        <p>description</p>
+    </div> -->
+    <main class="content">
 
+        <section class="boulangerie" id="id-boulangerie">
+            <div class="diapo infos imgboulangerie" id="banner-boulangerie">
+                <span id="boulangerie-prev" class="no-select prev"></span>
+                <h1>Boulangerie</h1>
+                <span id="boulangerie-next" class="no-select next"></span>
+            </div>
+            
+            <div class="presentation">
+                <h2 id="boulangerie-nom">nom</h2>
+                <p id="boulangerie-description">description</p>
+            </div>
         </section>
-        <section class="gourmandise">
-<!-- Test -->
+    
+        <section class="patisseries" id="id-patisseries">
+            <div class="diapo infos imgpatisseries" id="banner-patisseries">
+                <span id="patisseries-prev" class="no-select prev"></span>
+                <h1>Pâtisseries</h1>
+                <span id="patisseries-next" class="no-select next"></span>
+            </div>
+            <div class="presentation">
+                <h2 id="patisseries-nom">nom</h2>
+                <p id="patisseries-description">description</p>
+            </div>
         </section>
-    </main>
+    
+        <section class="sandwicherie" id="id-sandwicherie">
+            <div class="diapo infos imgsandwicherie" id="banner-sandwicherie">
+                <span id="sandwicherie-prev" class="no-select prev"></span>
+                <h1>Sandwicherie</h1>
+                <span id="sandwicherie-next" class="no-select next"></span>
+            </div>
+            <div class="presentation">
+                <h2 id="sandwicherie-nom">nom</h2>
+                <p id="sandwicherie-description">description</p>
+            </div>
+        </section>
+    
+        <section class="pizzas" id="id-pizzas">
+            <div class="diapo infos imgpizzas" id="banner-pizzas">
+                <span id="pizzas-prev" class="no-select prev"></span>
+                <h1>Pizzas</h1>
+                <span id="pizzas-next" class="no-select next"></span>
+            </div>
+            <div class="presentation">
+                <h2 id="pizzas-nom">nom</h2>
+                <p id="pizzas-description">description</p>
+            </div>
+        </section>
+        
+        <section class="gourmandises" id="id-gourmandises">
+            <div class="diapo infos imggourmandises" id="banner-gourmandises">
+                <span id="gourmandises-prev" class="no-select prev"></span>
+                <h1>Gourmandises</h1>
+                <span id="gourmandises-next" class="no-select next"></span>
+            </div>
+            <div class="presentation">
+                <h2 id="gourmandises-nom">nom</h2>
+                <p id="gourmandises-description">description</p>
+            </div>
+        </section>
+    </main>    
+
+
     <footer>
         <div class="footer-menu">
             <div class="footer-menu-left">
-
+                <span class="maps"></span>
             </div>
-            <div class="footer-menu-right"></div>
+            <div id="contact" class="footer-menu-right">
+                <form action="" method="POST">
+                    <div class="form-group form-row">
+                        <div>
+                            <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                        </div>
+                        <div>
+                            <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Mail" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder="Message" required
+                            style="resize: none; width: 100%; height: 100px;"></textarea>
+                    </div>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
         </div>
         <div class="copyright">
             <p>&copy; Quentin & Clément - CDA 2025.4</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+    var nav = document.getElementById('navigation');
+    nav.classList.toggle('open'); // Ajoute ou retire la classe "open" pour afficher le menu
+});
+    </script>
+
+    <script src="assets/script.js"></script>
 </body>
 
 </html>

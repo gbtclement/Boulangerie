@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "nom": "Éclair",
+        "description": "Un éclair au chocolat",
+        "image": "assets/img/Patisseries_1.jpg"
+    },
+    {
+        "id": 1,
+        "nom": "Macaron",
+        "description": "Un macaron aux framboises",
+        "image": "assets/img/Patisseries_2.jpg"
+    },
+    {
+        "id": 2,
+        "nom": "Pâtisserie 3",
+        "description": "Une Pâtisserie 3",
+        "image": "assets/img/Patisseries_3.jpg"
+    },
+    {
+        "id": 3,
+        "nom": "Pâtisserie 4",
+        "description": "Une Pâtisserie 4",
+        "image": "assets/img/Patisseries_4.jpg"
+    },
+    {
+        "id": 4,
+        "nom": "Pâtisserie 5",
+        "description": "Une Pâtisserie 5",
+        "image": "assets/img/Patisseries_5.jpg"
+    }
+]

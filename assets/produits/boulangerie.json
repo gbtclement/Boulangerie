@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "nom": "Baguette",
+        "description": "Une baguette",
+        "image": "assets/img/Boulangerie_1.jpg"
+    },
+    {
+        "id": 1,
+        "nom": "Baguette 2",
+        "description": "Une baguette 2",
+        "image": "assets/img/Boulangerie_2.jpg"
+    },
+    {
+        "id": 2,
+        "nom": "Baguette 3",
+        "description": "Une baguette 3",
+        "image": "assets/img/Boulangerie_3.jpg"
+    },
+    {
+        "id": 3,
+        "nom": "Baguette 4",
+        "description": "Une baguette 4",
+        "image": "assets/img/Boulangerie_4.jpg"
+    },
+    {
+        "id": 4,
+        "nom": "Baguette 5",
+        "description": "Une baguette 5",
+        "image": "assets/img/Boulangerie_5.jpg"
+    }
+]

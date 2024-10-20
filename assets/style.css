@@ -1,0 +1,453 @@
+:root {
+    --blanc: #EFEFEF;
+    --blanc-transparent: rgba(255, 255, 255, 0.8);
+    --gris-c: #C5B2B2;
+    --gris-f: #776A6A;
+    --orange: #E09023;
+    --radius: 20px;
+}
+
+.no-select {
+    user-select: none; /* Pour les navigateurs modernes */
+    -webkit-user-select: none; /* Pour Safari */
+    -moz-user-select: none; /* Pour Firefox */
+    -ms-user-select: none; /* Pour Internet Explorer et Edge */
+}
+
+/* ----------> fonts <---------- */
+
+/* Sous titre - H2 */
+*:is(h1, .titre) {
+    font-family: 'Bluu Next';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+
+    color: var(--gris-f);
+}
+
+
+*:is(h2, .sous-titre) {
+    font-family: 'Bluu Next';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+
+    color: var(--gris-f);
+}
+
+/* Paragraphe - p */
+*:is(p, .paragraphe) {
+    font-family: 'Bluu Next';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+
+    color: var(--gris-f);
+}
+
+.blanc {
+    color: var(--blanc);
+}
+
+.gris-c {
+    color: var(--gris-c);
+}
+
+.gris-f {
+    color: var(--gris-f);
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.rounded {
+    border-radius: 20px;
+}
+
+/* ----------> Body <---------- */
+
+body.accueil {
+    max-width: 1960px;
+    margin: 0;
+}
+
+/* ----------> Header <---------- */
+
+body.accueil header {
+    background-image: url(img/Magasin.jpg);
+    background-size: cover;
+    background-position: 50% 90%;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+body.accueil header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+body.accueil header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 30px;
+    border: 4px solid rgba(255, 255, 255, 0);
+    transition: 0.3s;
+}
+
+
+body.accueil header nav a:hover {
+    border: 4px solid white;
+}
+
+/* Cacher le bouton hamburger sur les grands écrans */
+body.accueil header .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    /* Cacher la navigation par défaut sur mobile */
+    body.accueil header #navigation {
+        display: none;
+        flex-direction: column;
+        background-color: var(--gris-c);
+    }
+
+    /* Afficher le bouton hamburger sur mobile */
+    body.accueil header .hamburger {
+        display: block;
+        position: absolute;
+        background-color: var(--gris-c);
+        color: white;
+        padding: 10px;
+    }
+
+    /* Afficher le menu navigation lorsqu'il est ouvert */
+    body.accueil header #navigation.open {
+        display: flex;
+    }
+}
+
+/* ----------> Main <---------- */
+
+body main section {
+    display: flex;
+    flex-direction: column;
+}
+
+body main .diapo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    border-bottom: 4px solid var(--gris-f);
+    border-top: 4px solid var(--gris-f);
+    position: relative; /* Positionnez-le relativement */
+    z-index: 1; /* Mettez le z-index plus élevé */
+}
+
+body main .boulangerie .imgboulangerie {
+    background-image: url(img/Boulangerie_1.jpg);
+}
+
+body main .patisseries .imgpatisseries {
+    background-image: url(img/Patisseries_1.jpg);
+}
+
+body main .sandwicherie .imgsandwicherie {
+    background-image: url(img/Sandwicherie_1.jpg);
+}
+
+body main .pizzas .imgpizzas {
+    background-image: url(img/Pizzas_1.jpg);
+}
+
+body main .gourmandises .imggourmandises {
+    background-image: url(img/Gourmandises_1.jpg);
+}
+
+body main .prev {
+    content: url("data:image/svg+xml,%3Csvg width='56' height='41' viewBox='0 0 56 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.125 0L25.9375 4.95417L13.7344 17.0833H55.5V23.9167H13.7344L25.9375 36.0458L21.125 41L0.5 20.5L21.125 0Z' fill='%23E09023'/%3E%3C/svg%3E%0A");
+}
+
+body main .next {
+    content: url("data:image/svg+xml,%3Csvg width='56' height='42' viewBox='0 0 56 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34.875 41.5L30.0625 36.5458L42.2656 24.4167H0.5V17.5833H42.2656L30.0625 5.45417L34.875 0.5L55.5 21L34.875 41.5Z' fill='%23E09023'/%3E%3C/svg%3E%0A");
+}
+
+body main .infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body main .infos span {
+    margin-left: 70px;
+    margin-right: 70px;
+    padding: 10px;
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--blanc-transparent);
+    border: 4px solid rgba(255, 255, 255, 0.0);
+    transition: 0.3s;
+}
+
+body main .infos span:hover {
+    border: 4px solid var(--orange);
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+body main .infos>h1 {
+    background-color: var(--blanc-transparent);
+    color: var(--gris-f);
+    border: 4px solid var(--gris-f);
+    padding: 15px 40px 15px 40px;
+    border-radius: var(--radius);
+
+}
+
+body .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    background-color: var(--gris-c);
+    border-radius: 20px;
+    margin: 50px 70px;
+    box-shadow: 0 2px 20px var(--gris-c);
+    width: 50%;
+    min-height: 300px;
+}
+
+/* body main .rectangle-left{
+    content: url("data:image/svg+xml,%3Csvg width='159' height='100' viewBox='0 0 159 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100 100H159L62 0H0L100 100Z' fill='%23776A6A'/%3E%3C/svg%3E%0A");
+    position: absolute;
+    top: 72%;
+    right: 65%;
+    z-index: 0;
+}
+
+body main .rectangle-right{
+    content: url("data:image/svg+xml,%3Csvg width='159' height='100' viewBox='0 0 159 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100 0H159L62 100H0L100 0Z' fill='%23776A6A'/%3E%3C/svg%3E%0A");
+    position: absolute;
+    top: 72%;
+    left: 65%;
+    z-index: 0;
+} */
+
+@media (max-width:768px){
+    body main .infos {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+
+
+/* ----------> Footer <---------- */
+
+
+/* ----------> Footer <---------- */
+
+body footer .footer-menu{
+    background-color: var(--gris-c);
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body footer .footer-menu .footer-menu-left .maps{
+    content: url(img/Maps.png);
+    height: 300px;
+    border-radius: var(--radius);
+}
+
+body footer .copyright{
+    background-color: var(--gris-f);
+    height: 100px;
+}
+
+body footer .copyright>p{
+    color: #0E162F;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+    margin: 0px 70px;
+}
+
+body footer form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+body footer form .form-row{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+body footer form input,
+body footer form textarea{
+    border: 4px solid var(--gris-f);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+body footer form input::placeholder,
+body footer form textarea::placeholder{
+    color: var(--orange);
+}
+
+body footer form button{
+    padding: 10px 15px;
+    color: white;
+    background-color: var(--orange);
+    border: 4px solid var(--orange);
+    border-radius: 10px;
+}
+
+body footer form input:focus,
+body footer form textarea:focus
+{
+outline: none;
+}
+
+body footer form button:hover{
+    border: 4px solid white;
+    cursor: pointer;
+}
+
+
+
+/* ----------> figma Body <---------- */
+/* Accueil */
+body.accueil {
+    background: #EFEFEF;
+}
+
+/* Auto layout */
+body.auto-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 82px;
+
+    position: absolute;
+    width: 1920px;
+    height: 6399.7px;
+    left: 0px;
+    top: 0px;
+}
+
+/* Inside auto layout */
+body.auto-layout {
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* ----------> figma header <---------- */
+/* Group 1 */
+.accueil header {
+    /* width: 1920px; */
+    height: 500px;
+}
+
+
+
+/* Header */
+.accueil header {
+    /* 
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+         */
+
+    background: url(299539436_492256899572370_7740719218526537875_n.jpg);
+}
+
+/* ----------> figma navbar <---------- */
+/* Navbar no bg */
+navbar.no-bg {
+    height: 181px;
+    /*
+    left: 0%;
+    right: 0%;
+    */
+    top: 160px;
+}
+
+
+/* Navbar */
+navbar {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+/* Header */
+.gray-gradient {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: linear-gradient(180deg, rgba(114, 82, 55, 0.06) 17.22%, rgba(160, 160, 160, 0.02) 47.22%, rgba(160, 160, 160, 0) 74%);
+}
+
+/* Auto layout */
+navbar.auto-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 66px;
+
+    position: absolute;
+    width: 70%;
+    height: 65px;
+    left: calc(50% - 70%/2 - 0.5px);
+    top: calc(50% - 65px/2);
+}
+
+
+/* bouton */
+.bouton {
+    width: 140px;
+    height: 65px;
+
+    font-family: 'Bluu Next';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: var(--gris-f);
+}

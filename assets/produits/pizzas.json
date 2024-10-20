@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "nom": "Pizza",
+        "description": "Une Pizza",
+        "image": "assets/img/Pizzas_1.jpg"
+    },
+    {
+        "id": 1,
+        "nom": "Pizza 2",
+        "description": "Une Pizza 2",
+        "image": "assets/img/Pizzas_2.jpg"
+    },
+    {
+        "id": 1,
+        "nom": "Pizza 3",
+        "description": "Une Pizza 3",
+        "image": "assets/img/Pizzas_3.jpg"
+    }
+]

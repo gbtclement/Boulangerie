@@ -1,0 +1,26 @@
+[
+    {
+        "id": 0,
+        "nom": "Sandwiches",
+        "description": "Un Sandwiches",
+        "image": "assets/img/Sandwicherie_1.jpg"
+    },
+    {
+        "id": 1,
+        "nom": "Sandwiches 2",
+        "description": "Un Sandwiches 2",
+        "image": "assets/img/Sandwicherie_2.jpg"
+    },
+    {
+        "id": 2,
+        "nom": "Sandwiches 3",
+        "description": "Un Sandwiches 3",
+        "image": "assets/img/Sandwicherie_3.jpg"
+    },
+    {
+        "id": 3,
+        "nom": "Sandwiches 4",
+        "description": "Un Sandwiches 4",
+        "image": "assets/img/Sandwicherie_4.jpg"
+    }
+]

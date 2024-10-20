@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "nom": "Gourmandises",
+        "description": "Une Gourmandises",
+        "image": "assets/img/Gourmandises_1.jpg"
+    },
+    {
+        "id": 1,
+        "nom": "Gourmandises 2",
+        "description": "Une Gourmandises 2",
+        "image": "assets/img/Gourmandises_2.jpg"
+    },
+    {
+        "id": 2,
+        "nom": "Gourmandises 3",
+        "description": "Une Gourmandises 3",
+        "image": "assets/img/Gourmandises_3.jpg"
+    }
+]
