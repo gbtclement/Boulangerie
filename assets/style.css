@@ -334,10 +334,16 @@ body footer form{
     gap: 20px;
 }
 
+body footer .form-group,
+body footer .form-group>input{
+    width: 100%;
+    display: flex;
+}
+
 body footer form .form-row{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
 }
 
 body footer form input,
@@ -375,6 +381,12 @@ body footer form button:hover{
     body footer form .form-row {
         flex-direction: column;
     }
+    body footer form input, body footer form textarea {
+        width: -webkit-fill-available;
+    }
+    body footer .footer-menu-right{
+        width: 100%;
+    }
 }
 
 @media (max-width:768px){
@@ -390,116 +402,7 @@ body footer form button:hover{
     }
 }
 
-/* ----------> figma Body <---------- */
 /* Accueil */
 body.accueil {
     background: #EFEFEF;
-}
-
-/* Auto layout */
-body.auto-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    gap: 82px;
-
-    position: absolute;
-    width: 1920px;
-    height: 6399.7px;
-    left: 0px;
-    top: 0px;
-}
-
-/* Inside auto layout */
-body.auto-layout {
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
-/* ----------> figma header <---------- */
-/* Group 1 */
-.accueil header {
-    /* width: 1920px; */
-    height: 500px;
-}
-
-
-
-/* Header */
-.accueil header {
-    /* 
-        position: absolute;
-        left: 0%;
-        right: 0%;
-        top: 0%;
-        bottom: 0%;
-         */
-
-    background: url(299539436_492256899572370_7740719218526537875_n.jpg);
-}
-
-/* ----------> figma navbar <---------- */
-/* Navbar no bg */
-navbar.no-bg {
-    height: 181px;
-    /*
-    left: 0%;
-    right: 0%;
-    */
-    top: 160px;
-}
-
-
-/* Navbar */
-navbar {
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-}
-
-/* Header */
-.gray-gradient {
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
-    background: linear-gradient(180deg, rgba(114, 82, 55, 0.06) 17.22%, rgba(160, 160, 160, 0.02) 47.22%, rgba(160, 160, 160, 0) 74%);
-}
-
-/* Auto layout */
-navbar.auto-layout {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    gap: 66px;
-
-    position: absolute;
-    width: 70%;
-    height: 65px;
-    left: calc(50% - 70%/2 - 0.5px);
-    top: calc(50% - 65px/2);
-}
-
-
-/* bouton */
-.bouton {
-    width: 140px;
-    height: 65px;
-
-    font-family: 'Bluu Next';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: var(--gris-f);
 }
